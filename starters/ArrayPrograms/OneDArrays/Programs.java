@@ -49,33 +49,48 @@ public class Programs extends Utils {
         return commonValues;
     }
 
-    public static int[] twoSum(int[] nums, int target) {
-        Set<Integer> arr = new HashSet<>();
-        int k = 0;
+    // public static int[] twoSum(int[] nums, int target) {
+    // Set<Integer> arr = new HashSet<>();
+    // int k = 0;
+    // for (int i = 0; i < nums.length; i++) {
+    // for (int j = i + 1; j < nums.length; j++) {
+    // if (nums[i] + nums[j] == target) {
+
+    // arr.add(i);
+    // arr.add(j);
+    // k = k + 2;
+    // }
+    // }
+    // }
+
+    // int x = 0;
+    // int[] result = new int[k];
+    // for (int i : arr) {
+    // result[x] = i;
+    // x++;
+    // }
+
+    // return result;
+    // }
+
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
-
-                    arr.add(i);
-                    arr.add(j);
-                    k = k + 2;
+                    result[0] = i;
+                    result[1] = j;
+                    return result;
                 }
             }
-        }
-        int x = 0;
-        int[] result = new int[k];
-        for (int i : arr) {
-            result[x] = i;
-            x++;
+
         }
 
         return result;
     }
 
     public static void main(String[] args) {
-        int[] arr1 = { 2, 7, 11, 15 };
-        int[] arr = twoSum(arr1, 9);
-        printArray(arr);
+
     }
 
 }
