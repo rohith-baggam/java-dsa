@@ -1,6 +1,7 @@
 package starters.StringPrograms;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class Programs {
@@ -96,6 +97,7 @@ public class Programs {
         if (board[0].length == 0) {
             return false;
         }
+
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[i][j] == word.charAt(0) & isExists(board, word, i, j)) {
@@ -108,11 +110,18 @@ public class Programs {
     }
 
     public static void main(String[] args) {
-        // char[][] board = { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
-        // String words = "ABCCED";
-        // System.out.println(exist(board, words));
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            numbers.add(i);
+        }
+        numbers.add(2, 10);
+        numbers.remove(Integer.valueOf(4));
+
+        System.out.println(numbers);
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        hashMap.getOrDefault(1, null);
 
     }
 }
